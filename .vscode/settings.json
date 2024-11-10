@@ -1,6 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://json.schemastore.org/hugo.json": "file:///d%3A/Users/yan_h/Desktop/Blog/.github/workflows/hugo.yaml",
-        "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/default_policy_values.json": "file:///d%3A/Users/yan_h/Desktop/Blog/hugo.yaml"
-    }
-}
