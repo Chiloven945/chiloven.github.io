@@ -1,33 +1,45 @@
 <style>
   @font-face {
     font-family: "HarmonyOS Sans SC";
-    src: url("fonts/HarmonyOSSansSC-Medium.woff2") format("woff2");
+    src: url('{{ (resources.Get "fonts/HarmonyOSSansSC-Medium.woff2").Permalink }}')
+      format("woff2");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: "HarmonyOS Sans SC";
-    src: url("fonts/HarmonyOSSansSC-Medium-Italic.woff2") format("woff2");
+    src: url('{{ (resources.Get "fonts/HarmonyOSSansSC-Medium-Italic.woff2").Permalink }}')
+      format("woff2");
     font-weight: normal;
     font-style: italic;
   }
 
   @font-face {
     font-family: "HarmonyOS Sans SC";
-    src: url("fonts/HarmonyOSSansSC-Bold.woff2") format("woff2");
+    src: url('{{ (resources.Get "fonts/HarmonyOSSansSC-Bold.woff2").Permalink }}')
+      format("woff2");
     font-weight: bold;
     font-style: normal;
   }
 
   @font-face {
     font-family: "HarmonyOS Sans SC";
-    src: url("fonts/HarmonyOSSansSC-Bold-Italic.woff2") format("woff2");
+    src: url('{{ (resources.Get "fonts/HarmonyOSSansSC-Bold-Italic.woff2").Permalink }}')
+      format("woff2");
     font-weight: bold;
     font-style: italic;
   }
 
-  body {
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
     font-family: "HarmonyOS Sans SC", sans-serif; /* 应用自定义字体，备选字体为sans-serif */
   }
 
@@ -51,8 +63,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Adjust opacity here to change darkness */
+    background: rgba(255, 255, 255, 0.7); /* Default to light overlay */
     z-index: -1;
+  }
+
+  /* Dark mode specific styles */
+  @media (prefers-color-scheme: dark) {
+    .background::after {
+      background: rgba(0, 0, 0, 0.4); /* Dark overlay for dark mode */
+    }
   }
 </style>
 
